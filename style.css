@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+}
+
+body {
+    background-color: #000;
+    color: #eee;
+    font-size: 12px;
+}
+
+header {
+    width: 80%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    margin: auto;
+    z-index: 2;
+}
+
+header a {
+    color: #eee;
+    font-size: 12px;
+    margin-right: 40px;
+    font-weight: 300;
+}
