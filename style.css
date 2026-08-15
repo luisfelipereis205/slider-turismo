@@ -1,100 +1,120 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-    text-decoration: none;
-    /*overflow-y: hidden;*/
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  /*overflow-y: hidden;*/
 }
 
 body {
-    background-color: #000;
-    color: #eee;
-    font-size: 12px;
+  background-color: #000;
+  color: #eee;
+  font-size: 12px;
 }
 
 header {
-    width: 80%;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    margin: auto;
-    position: relative;
-    z-index: 2;
+  width: 50%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  position: relative;
+  z-index: 2;
 }
 
 header a {
-    color: #eee;
-    font-size: 12px;
-    margin-right: 40px;
-    font-weight: 300;
+  color: #eee;
+  font-size: 15px;
+  font-weight: 400;
+  margin-right: 50px;
+  padding: 7px;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+
+header a:hover {
+  background-color: #eee;
+  color: #000;
+  border-radius: 20px;
+  color: #000;
 }
 
 .container {
-    height: 100vh;
-    width: 100vw;
-    margin-top: -50px;
-    overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+  margin-top: -50px;
+  overflow: hidden;
 }
 
 .container .list .list-item {
-    width: 100%;
-    height: 100%;
-    position: absolute;
+  width: 100%;
+  height: 100%;
+  position: absolute;
 }
 
-.container .list .list-item img{
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-    filter: brightness(50%);
+.container .list .list-item img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  filter: brightness(50%);
 }
 
 .container .list .list-item .content {
-    position: absolute;
-    top: 20%;
-    right: 10%;
-    padding-right: 30%;
-    width: 80%;
-    color: #eee;
-    text-shadow: 0 5px 10px #0003;
+  position: absolute;
+  top: 20%;
+  right: 10%;
+  padding-right: 30%;
+  width: 80%;
+  color: #eee;
+  text-shadow: 0 5px 10px #0003;
 }
 
 .container .list .list-item .content h2 {
-    font-size: 5em;
-    font-weight: 700;
-    line-height: 1.3em;
+  font-size: 5em;
+  font-weight: 700;
+  line-height: 1.3em;
 }
 
 .container .list .list-item .content p {
-    font-size: 1.5em;
+  font-size: 1.5em;
 }
 
 .container .list .list-item .content .buttons {
-    display: grid;
-    grid-template-columns: repeat(2, 130px);
-    grid-template-rows: 30px;
-    gap: 5px;
+  display: grid;
+  grid-template-columns: repeat(2, 130px);
+  grid-template-rows: 30px;
+  gap: 10px;
+  margin-top: 15px;
 }
 
 .container .list .list-item .content .buttons button {
-    border: none;
-    background-color: #eee;
-    letter-spacing: 3px;
-    font-weight: 500;
-    cursor: pointer;
-    text-transform: uppercase;
+  border: none;
+  background-color: #eee;
+  letter-spacing: 3px;
+  font-weight: 500;
+  cursor: pointer;
+  text-transform: uppercase;
+  border-radius: 20px;
 }
 
-.container .list .list-item .content .buttons button:nth-child(2){
-    background-color: transparent;
-    border: 1px solid #eee;
-    color: #eee;
+.container .list .list-item .content .buttons button:nth-child(2) {
+  background-color: transparent;
+  border: 1px solid #eee;
+  color: #eee;
+}
+
+.container .list .list-item .content .buttons button:nth-child(2):hover {
+  background-color: #eee;
+  border: 1px solid #eee;
+  color: #000;
+  transition: 0.5s;
 }
 
 .container .list .list-item .content .buttons button:hover {
-    background-color: transparent;
-    border: 1px solid #eee;
-    color: #eee;
-    transition: 0.5s;
+  background-color: transparent;
+  border: 1px solid #eee;
+  color: #eee;
+  transition: 0.5s;
 }
