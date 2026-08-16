@@ -20,6 +20,7 @@ btnNext.addEventListener("click", () => {
 
     setTimeout(() => {
     container.classList.remove("next")
+    container.classList.remove("back")
     }, 3000);
 })
 
@@ -33,6 +34,7 @@ btnBack.addEventListener("click", () => {
     container.classList.add("back")
 
     setTimeout(() => {
+    container.classList.remove("next")
     container.classList.remove("back")
     }, 3000);
 })
