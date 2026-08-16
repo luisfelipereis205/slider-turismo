@@ -29,15 +29,15 @@ header a {
   font-size: 15px;
   font-weight: 400;
   margin-right: 50px;
-  padding: 7px;
-  border-radius: 10px;
+  padding: 10px;
+  border-radius: 50%;
   transition: 0.5s;
 }
 
 header a:hover {
   background-color: #eee;
   color: #000;
-  border-radius: 20px;
+  border-radius: 50%;
   color: #000;
 }
 
@@ -59,6 +59,10 @@ header a:hover {
   width: 100%;
   height: 100%;
   filter: brightness(50%);
+}
+
+.container .list .list-item .specific-image{
+  object-position: bottom;
 }
 
 .container .list .list-item .content {
