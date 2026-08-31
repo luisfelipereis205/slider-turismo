@@ -1,0 +1,221 @@
+
+@media (max-width: 768px) {
+  
+  header {
+    width: 100%;
+  }
+
+  .container .list .list-item .content {
+    width: 90%;
+    padding-right: 0;
+    top: 15%;
+    left: 5%;
+    right: 5%;
+    text-align: center;
+  }
+
+  .container .list .list-item .content h2 {
+    font-size: 2.5em; 
+  }
+
+  .container .list .list-item .content p {
+    font-size: 1em; 
+  }
+
+  .container .list .list-item .content .buttons {
+    justify-content: center;
+    margin: 20px auto;
+  }
+
+  /* thumb fica na horizontal */
+  .container .thumb {
+    flex-direction: row;
+    left: 50%;
+    transform: translateX(-50%);
+    justify-content: center;
+    bottom: 20px;
+    gap: 10px;
+    width: 95%;
+  }
+
+  .container .thumb .thumb-item {
+    width: 70px;
+    height: 100px;
+  }
+
+  /* Aqui esconde os textos das thumb em telas pequenas */
+  .container .thumb .content {
+    display: none; 
+  }
+
+  /* Centraliza as setas */
+  .container .arrows {
+    justify-content: center;
+    transform: translateX(-50%);
+    left: 50%;
+    bottom: 140px;
+    width: 100%;
+  }
+
+  /*  Animações  */
+
+  /* Remove o pulo da lista de thumbnails */
+  .container.next .thumb {
+    animation: none;
+  }
+
+  .container.next .thumb-item:nth-last-child(1) {
+    animation: simpleFadeIn 0.5s linear forwards;
+  }
+
+  /* Retira o efeito da imagem voando do canto */
+  .container.next .list-item:nth-last-child(1) img {
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    border-radius: 0;
+    animation: simpleFadeIn 0.5s linear forwards;
+  }
+
+  .container.back .list-item:nth-child(1) img {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 0;
+    animation: simpleFadeOut 0.5s linear forwards;
+    z-index: 2;
+  }
+
+  .container .list .list-item:nth-last-child(1) .content .title,
+  .container .list .list-item:nth-last-child(1) .content .description,
+  .container .list .list-item:nth-last-child(1) .content .buttons {
+    transform: translateY(0);
+    filter: blur(0);
+    opacity: 0;
+    animation: simpleFadeInText 0.5s forwards;
+  }
+
+  .container .list .list-item:nth-last-child(1) .content .title {
+    animation-delay: 0.2s;
+  }
+  .container .list .list-item:nth-last-child(1) .content .description {
+    animation-delay: 0.4s;
+  }
+  .container .list .list-item:nth-last-child(1) .content .buttons {
+    animation-delay: 0.6s;
+  }
+
+  @keyframes simpleFadeIn {
+    from { opacity: 0.3; }
+    to { opacity: 1; }
+  }
+
+  @keyframes simpleFadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+  }
+
+  @keyframes simpleFadeInText {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+}
+
+/* ajuste para telas deitada */
+@media (max-width: 950px) and (max-height: 500px) and (orientation: landscape) {
+  
+  /* Ajusta o texto para a esquerda*/
+  .container .list .list-item .content {
+    top: 15%;
+    left: 5%;
+    width: 60%; 
+    text-align: left;
+    padding-right: 0;
+  }
+
+  .container .list .list-item .content h2 {
+    font-size: 2.2em;
+    line-height: 1.1em;
+    margin-bottom: 5px;
+  }
+
+  /* Limita a descrição a 3 linhas*/
+  .container .list .list-item .content p {
+    font-size: 0.9em;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+  }
+
+  .container .list .list-item .content .buttons {
+    justify-content: flex-start;
+    margin: 10px 0 0 0;
+    gap: 10px;
+    transform: scale(0.85); 
+    transform-origin: left center;
+  }
+
+  .container .arrows {
+    bottom: 15px;
+    left: 5%;
+    width: auto;
+    gap: 15px;
+    transform: none;
+  }
+
+  .container .arrows button {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2em;
+  }
+
+  .container .thumb {
+    flex-direction: column;
+    left: auto;
+    right: 20px;
+    bottom: 10px;
+    transform: none;
+    gap: 10px;
+    width: auto;
+  }
+
+  .container .thumb .thumb-item {
+    width: 70px;
+    height: 90px;
+  }
+
+    .container.next .thumb {
+    animation: none;
+  }
+
+  .container.next .list-item:nth-last-child(1) img {
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    border-radius: 0;
+    animation: simpleFadeIn 0.5s linear forwards;
+  }
+
+  .container.back .list-item:nth-child(1) img {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 0;
+    animation: simpleFadeOut 0.5s linear forwards;
+    z-index: 2;
+  }
+
+  .container .list .list-item:nth-last-child(1) .content .title,
+  .container .list .list-item:nth-last-child(1) .content .description,
+  .container .list .list-item:nth-last-child(1) .content .buttons {
+    transform: translateY(0);
+    filter: blur(0);
+    opacity: 0;
+    animation: simpleFadeInText 0.5s forwards;
+  }
+}

@@ -4,41 +4,62 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
   text-decoration: none;
-  overflow-y: hidden;
 }
 
 body {
   background-color: #000;
   color: #eee;
   font-size: 12px;
+  overflow-y: hidden;
+  overflow-x: hidden;
 }
 
 header {
-  width: 50%;
+  width: 100%; /* Ocupa a tela toda, garantindo o centro absoluto */
   height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: auto;
   position: relative;
   z-index: 2;
+}
+
+header nav {
+  display: flex;
+  gap: 20px; /* Cria o espaçamento perfeito apenas ENTRE os itens */
 }
 
 header a {
   color: #eee;
   font-size: 15px;
   font-weight: 400;
-  margin-right: 50px;
-  padding: 10px;
-  border-radius: 50%;
-  transition: 0.5s;
+  position: relative;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+header a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background: currentColor;
+  transition: width 0.3s ease, left 0.3s ease;
 }
 
 header a:hover {
-  background-color: #eee;
-  color: #000;
-  border-radius: 50%;
-  color: #000;
+  color: #eeeeee83;
+}
+
+header a:last-child {
+  margin-right: 0;
+}
+
+header nav a:hover::after {
+  width: 100%;
+  left: 0;
 }
 
 .container {
@@ -61,7 +82,7 @@ header a:hover {
   filter: brightness(50%);
 }
 
-.container .list .list-item .specific-image{
+.container .list .list-item .specific-image {
   object-position: bottom;
 }
 
@@ -215,7 +236,9 @@ header a:hover {
   }
 }
 
-.container .list .list-item:nth-last-child(1) .content .title, .container .list .list-item:nth-last-child(1) .content .description, .container .list .list-item:nth-last-child(1) .content .buttons {
+.container .list .list-item:nth-last-child(1) .content .title,
+.container .list .list-item:nth-last-child(1) .content .description,
+.container .list .list-item:nth-last-child(1) .content .buttons {
   transform: translateY(50px);
   filter: blur(50px);
   opacity: 0;
@@ -234,7 +257,7 @@ header a:hover {
   animation-delay: 1s;
 }
 
-.container .list .list-item:nth-last-child(1) .content .description{
+.container .list .list-item:nth-last-child(1) .content .description {
   animation-delay: 1.4s;
 }
 
@@ -249,7 +272,7 @@ header a:hover {
   bottom: 20px;
   left: 90%;
   border-radius: 30px;
-  animation: showMainImage 0.5s linear 1 forwards ;
+  animation: showMainImage 0.5s linear 1 forwards;
 }
 
 @keyframes showMainImage {
@@ -262,7 +285,7 @@ header a:hover {
   }
 }
 
-.container.back .list-item:nth-child(1) img  {
+.container.back .list-item:nth-child(1) img {
   position: absolute;
   top: 0;
   left: 0;

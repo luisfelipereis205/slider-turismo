@@ -38,4 +38,3 @@ btnBack.addEventListener("click", () => {
     container.classList.remove("back")
     }, 3000);
 })
-
