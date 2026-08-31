@@ -7,8 +7,8 @@
 }
 
 body {
-  background-color: #000;
-  color: #eee;
+  background-color: #17130F;
+  color: #FFF8E7;
   font-size: 12px;
   overflow-y: hidden;
   overflow-x: hidden;
@@ -30,7 +30,7 @@ header nav {
 }
 
 header a {
-  color: #eee;
+  color: #FFF8E7;
   font-size: 15px;
   font-weight: 400;
   position: relative;
@@ -50,7 +50,7 @@ header a::after {
 }
 
 header a:hover {
-  color: #eeeeee83;
+  color: #E9C46A;
 }
 
 header a:last-child {
@@ -116,31 +116,27 @@ header nav a:hover::after {
 
 .container .list .list-item .content .buttons button {
   border: none;
-  background-color: #eee;
+  border: 1px solid #FFF8E7;
+  background-color: #FFF8E7;
+  color: #071A1D;
   letter-spacing: 3px;
   font-weight: 500;
   cursor: pointer;
   text-transform: uppercase;
   border-radius: 20px;
+  transition: 0.3s;
 }
 
 .container .list .list-item .content .buttons button:nth-child(2) {
   background-color: transparent;
-  border: 1px solid #eee;
-  color: #eee;
-}
-
-.container .list .list-item .content .buttons button:nth-child(2):hover {
-  background-color: #eee;
-  border: 1px solid #eee;
-  color: #000;
-  transition: 0.5s;
+  border: 1px solid #FFF8E7;
+  color: #FFF8E7;
 }
 
 .container .list .list-item .content .buttons button:hover {
-  background-color: transparent;
-  border: 1px solid #eee;
-  color: #eee;
+  background-color: #E9C46A;
+  border-color: #E9C46A;
+  color: #17130F;
   transition: 0.5s;
 }
 
@@ -200,18 +196,21 @@ header nav a:hover::after {
 .container .arrows button {
   width: 50px;
   height: 50px;
-  border: none;
-  background-color: #eee4;
-  color: #eee;
+  border: 1px solid #FFF8E766;
+  background-color: #17130F66;
+  color: #FFF8E7;
   border-radius: 50%;
   cursor: pointer;
   font-weight: 700;
   font-size: 1.5em;
+  backdrop-filter: blur(5px);
+  transition: 0.3s;
 }
 
 .container .arrows button:hover {
-  background-color: #eee;
-  color: #000;
+  background-color: #E9C46A;
+  color: #17130F;
+  border-color: #E9C46A;
   transition: 0.4s;
 }
 
