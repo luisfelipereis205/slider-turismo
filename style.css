@@ -295,11 +295,11 @@ header nav a:hover::after {
 @keyframes hideMainImage {
   to {
     width: 145px;
-    height: 200px;
+    height: 198px;
     overflow: hidden;
     position: relative;
     border-radius: 20px;
-    top: 46px;
+    top: 82px;
     left: 90%;
   }
 }
