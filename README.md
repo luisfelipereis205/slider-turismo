@@ -46,7 +46,7 @@ O projeto também explora técnicas de posicionamento e sobreposição de elemen
 1. Clone o repositório:
 
    ```bash
-   git clone [https://github.com/luisfelipereis205/slider-turismo.git]
+   git clone https://github.com/luisfelipereis205/slider-turismo.git
    ```
 
 2. Entre na pasta do projeto:
